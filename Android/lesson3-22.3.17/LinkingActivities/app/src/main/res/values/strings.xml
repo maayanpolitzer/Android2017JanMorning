@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LinkingActivities</string>
+    <string name="btn_text">click</string>
+    <string name="no_internet_message">You dont have a stable internet connection</string>
+</resources>
