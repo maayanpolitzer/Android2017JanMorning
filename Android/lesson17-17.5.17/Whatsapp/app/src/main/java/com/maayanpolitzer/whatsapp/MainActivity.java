@@ -1,14 +1,19 @@
 package com.maayanpolitzer.whatsapp;
 
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.maayanpolitzer.whatsapp.connections.RequestThread;
 import com.maayanpolitzer.whatsapp.infrastructure.BaseActivity;
 import com.maayanpolitzer.whatsapp.login_stuff.LoginActivity;
+import com.maayanpolitzer.whatsapp.user_activities.ProfileActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,7 +46,7 @@ public class MainActivity extends BaseActivity implements RequestThread.Callback
     }
 
     private void onAutoLoginCompleted(Bundle saveInstanceState) {
-        Toast.makeText(this, "Done", Toast.LENGTH_LONG).show();
+
     }
 
     @Override
@@ -62,9 +67,29 @@ public class MainActivity extends BaseActivity implements RequestThread.Callback
         changeActivity(LoginActivity.class, true);
     }
 
-    public void logout(View view) {
-        editor.clear();
-        editor.commit();
-        changeActivity(LoginActivity.class, true);
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_main_action_profile:
+                changeActivity(ProfileActivity.class, false);
+                return true;
+
+            case R.id.menu_main_action_logout:
+                editor.clear();
+                editor.commit();
+                changeActivity(LoginActivity.class, true);
+                return true;
+
+            default:
+                return false;
+        }
     }
 }

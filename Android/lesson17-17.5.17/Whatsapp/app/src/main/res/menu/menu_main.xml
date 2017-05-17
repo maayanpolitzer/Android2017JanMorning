@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Refresh"
+        android:icon="@drawable/refresh"
+        app:showAsAction="always"
+        android:id="@+id/menu_main_action_refresh"/>
+    <item android:title="Profile"
+        android:icon="@drawable/profile"
+        app:showAsAction="always"
+        android:id="@+id/menu_main_action_profile"/>
+    <item android:title="Logout"
+        android:icon="@drawable/logout"
+        app:showAsAction="always"
+        android:id="@+id/menu_main_action_logout"/>
+</menu>
