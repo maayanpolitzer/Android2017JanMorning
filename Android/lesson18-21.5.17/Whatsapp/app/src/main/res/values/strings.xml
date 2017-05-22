@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Whatsapp</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="account_question">Don\'t have an account yet?</string>
+    <string name="register_text">REGISTER HERE</string>
+    <string name="login_button_text">login</string>
+    <string name="email_error_message">Please enter a valid email</string>
+    <string name="password_error_message">Please enter a valid password</string>
+    <string name="confirm_password_hint">Confirm password</string>
+    <string name="register_button_text">Signup</string>
+    <string name="confirm_password_error_message">Passwords must match!</string>
+    <string name="change_image_text">Change image</string>
+</resources>

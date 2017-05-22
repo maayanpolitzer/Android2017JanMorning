@@ -21,13 +21,13 @@ public abstract class BaseActivity extends AppCompatActivity implements RequestT
 
     private static final String SHARED_PREFS_FILE_NAME = "prefsFile";
 
-    public static final String USER_ID = "userID";
+    protected static final String USER_ID = "userID";
     protected static final String USER_EMAIL = "email";
     protected static final String USER_PASSWORD = "password";
     protected static final int USER_NOT_EXISTS = -1;
     protected static final int EMAIL_ALREADY_EXISTS = -1;
 
-    public SharedPreferences settings;
+    protected SharedPreferences settings;
     protected SharedPreferences.Editor editor;
 
     protected String email;
@@ -90,5 +90,10 @@ public abstract class BaseActivity extends AppCompatActivity implements RequestT
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onFailure(String error) {
+
     }
 }

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.Handler;
 
+import com.maayanpolitzer.whatsapp.infrastructure.BaseThread;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -20,10 +22,7 @@ import java.net.URL;
  * Created by maayanpolitzer on 16/05/2017.
  */
 
-public class RequestThread extends Thread {
-
-    //private static final String SERVER_IP = "http://104.199.43.149/project/server/";
-    private static final String SERVER_IP = "http://192.168.1.102:8080/";
+public class RequestThread extends BaseThread {
 
     private static final String ACTION = "action";
 

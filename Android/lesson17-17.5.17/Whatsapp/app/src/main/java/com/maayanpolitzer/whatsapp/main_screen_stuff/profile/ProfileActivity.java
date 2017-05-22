@@ -1,4 +1,4 @@
-package com.maayanpolitzer.whatsapp.user_activities;
+package com.maayanpolitzer.whatsapp.main_screen_stuff.profile;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +16,9 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         EditText changePasswordET = (EditText) findViewById(R.id.activity_profile_password_edit_text);
+
+
+
         changePasswordET.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

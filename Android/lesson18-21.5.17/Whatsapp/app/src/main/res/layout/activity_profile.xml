@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:id="@+id/activity_profile_main_relative_layout">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/activity_profile_avatar_image_view"
+        android:src="@drawable/default_avatar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_profile_change_avatar_text_view"
+        android:layout_below="@id/activity_profile_avatar_image_view"
+        android:text="@string/change_image_text"
+        android:layout_alignLeft="@id/activity_profile_avatar_image_view"
+        android:layout_alignRight="@id/activity_profile_avatar_image_view"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:visibility="invisible"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_profile_change_avatar_frame_layout"
+        android:layout_alignTop="@id/activity_profile_avatar_image_view"
+        android:layout_alignLeft="@id/activity_profile_avatar_image_view"
+        android:layout_alignRight="@id/activity_profile_avatar_image_view"
+        android:layout_alignBottom="@id/activity_profile_change_avatar_text_view"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_profile_email_edit_text"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/activity_profile_change_avatar_frame_layout"
+        android:hint="@string/email_hint"
+        android:textColorHint="#000"
+        android:gravity="center"
+        android:drawableLeft="@drawable/email"
+        android:enabled="false"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_profile_password_edit_text"
+        android:layout_below="@id/activity_profile_email_edit_text"
+        android:text="Tap here to change your password"
+        android:drawableLeft="@drawable/change_password"
+        android:gravity="center"
+        android:focusable="false"/>
+
+    </RelativeLayout>
