@@ -1,0 +1,34 @@
+שיעורי בית
+
+שיעורי בית -
+
+Int sum = sumOfOddsIndex(studentsGradeA);
+System.out.println(sum);
+
+Int [] reverse = flipArray(studentsGradeA);
+printArry(reverse); 
+ליצור מערך חדש , הפוך מהמערך שעשינו.
+
+
+
+406
+7
+20-
+
+
+מהמערך הקיים ליצור מערך נוסף שמכפיל את המערך הקודם 
+
+Int [] largeArr = doubleMyArray(studentsGradeA);
+printArry(largeArr);
+
+
+-20
+-20
+7
+7
+406
+406
+
+
+למתקדמים להכפיל את התרגיל הקודם פי 4 (24 אינדקסים) 
+
